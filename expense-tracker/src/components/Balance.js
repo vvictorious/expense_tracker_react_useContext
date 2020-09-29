@@ -8,11 +8,11 @@ export const Balance = () => {
     const sum = transactions.map(transaction => transaction.amount)
 
     const amount = sum.reduce((acc, index) => (acc += index),0)
-    
+
     return (
         <div>
             <h4>Balance:</h4>
-            <h3>{amount}</h3>
+            <h1>${amount}</h1>
         </div>
     )
 }
