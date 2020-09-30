@@ -5,14 +5,14 @@ import { GlobalContext } from '../context/GlobalState';
 export const Balance = () => {
     const { transactions } = useContext(GlobalContext)
 
-    const sum = transactions.map(transaction => transaction.amount)
+    const amounts = transactions.map(transaction => transaction.amount)
 
-    const amount = sum.reduce((acc, index) => (acc += index),0)
+    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2)
 
     return (
         <div>
             <h4>Balance:</h4>
-            <h1>${amount}</h1>
+            <h1>${total}</h1>
         </div>
     )
 }
