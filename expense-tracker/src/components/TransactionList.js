@@ -6,7 +6,7 @@ import { Transaction } from './Transaction'
 export const TransactionList = () => {
     const { transactions } = useContext(GlobalContext)
     return (
-        <ul>
+        <ul className="list">
             {transactions.map(transaction => (
                 <Transaction transaction={transaction} key={transaction.id} />
             ))}
